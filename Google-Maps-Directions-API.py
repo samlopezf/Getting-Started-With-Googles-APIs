@@ -6,8 +6,8 @@ import urllib.request, json
 endpoint = 'https://maps.googleapis.com/maps/api/directions/json?'
 api_key = 'AIzaSyCLNO5mol_LjqDuOkTKLBke4Q9de-6GVy4'
 #Asks the user to input Where they are and where they want to go.
-origin = input('Where are you?: ').replace(' ','+')
-destination = input('Where do you want to go?: ').replace(' ','+')
+origin = raw_input('Where are you?: ').replace(' ','+')
+destination = raw_input('Where do you want to go?: ').replace(' ','+')
 #Building the URL for the request
 nav_request = 'origin={}&destination={}&key={}'.format(origin,destination,api_key)
 request = endpoint + nav_request
